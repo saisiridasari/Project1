@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Positions - Musinga Airways</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Popup Styling */
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Popup Content */
+        .popup-content {
+            background-color: #333; /* Solid dark background */
+            padding: 20px;
+            border-radius: 15px;
+            width: 500px;  /* Increased width */
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+            animation: slideUp 0.5s ease;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .close-btn {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #e74c3c;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .popup-content p {
+            font-size: 14px;
+            margin: 8px 0;
+            opacity: 0.9;
+        }
+
+        .popup-content label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .popup-content input[type="text"],
+        .popup-content input[type="email"],
+        .popup-content input[type="file"],
+        .popup-content textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .popup-content input[type="text"]:focus,
+        .popup-content input[type="email"]:focus,
+        .popup-content input[type="file"]:focus,
+        .popup-content textarea:focus {
+            border-color: #00c6ff; /* Blue border on focus */
+        }
+
+        .popup-content button {
+            background-color: #00c6ff;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .popup-content button:hover {
+            background-color: #0072ff;
+        }
+
+        /* Smooth Fade-In and Slide-Up Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>MUSINGA AIRWAYS</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="managebooking.html">Manage Booking</a></li>
+                <li><a href="feedback.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="jobs" class="job-listings">
+        <h2>Available Positions</h2>
+        
+        <div class="job">
+            <h3>Flight Attendant</h3>
+            <p>Locations: New York, NY | San Francisco, CA</p>
+            <p>Requirements: High school diploma, excellent customer service skills, valid passport.</p>
+            <a href="#" id="applyBtn1" class="apply-btn">Apply Now</a>
+        </div>
+        
+        <div class="job">
+            <h3>Pilot</h3>
+            <p>Locations: Los Angeles, CA | London, UK</p>
+            <p>Requirements: Commercial pilot license, 3+ years of experience, valid medical certificate.</p>
+            <a href="#" id="applyBtn2" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job">
+            <h3>Customer Service Agent</h3>
+            <p>Locations: Chicago, IL | Toronto, Canada</p>
+            <p>Requirements: High school diploma, 1+ year of customer service experience.</p>
+            <a href="#" id="applyBtn3" class="apply-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Pop-up Window -->
+    <div id="popupForm" class="popup-form">
+        <div class="popup-content">
+            <span id="closeBtn" class="close-btn">&times;</span>
+            <h2>Musinga Airways - Job Application</h2>
+            <p><strong>Position:</strong> Flight Attendant</p>
+            <p><strong>Responsibilities:</strong> Ensure the safety and comfort of passengers during flights, provide excellent customer service, and assist in case of emergencies.</p>
+            <p><strong>Qualifications:</strong> High school diploma, excellent communication skills, ability to stay calm under pressure, and relevant experience preferred.</p>
+
+            <!-- Job Application Form -->
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" required>
+
+                <label for="coverLetter">Cover Letter:</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Musinga Airways. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the button, popup form, and close button
+        const applyBtn1 = document.getElementById("applyBtn1");
+        const applyBtn2 = document.getElementById("applyBtn2");
+        const applyBtn3 = document.getElementById("applyBtn3");
+        const popupForm = document.getElementById("popupForm");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // When the user clicks on "Apply Now" button, open the form
+        applyBtn1.addEventListener("click", () => {
+            popupForm.style.display = "flex";
+        });
+
+        applyBtn2.addEventListener("click", () => {
+            popupForm.style.display = "flex";
+        });
+
+        applyBtn3.addEventListener("click", () => {
+            popupForm.style.display = "flex";
+        });
+
+        // When the user clicks on the "close" button, close the form
+        closeBtn.addEventListener("click", () => {
+            popupForm.style.display = "none";
+        });
+
+        // When the user clicks outside the popup, close the form
+        window.addEventListener("click", (event) => {
+            if (event.target == popupForm) {
+                popupForm.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>

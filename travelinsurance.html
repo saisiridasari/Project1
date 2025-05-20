@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musinga Airlines - Travel Insurance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>MUSINGA AIRWAYS</h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="flights.html">Flights</a></li>
+              <li><a href="managebooking.html">Manage Booking</a></li>
+              <li><a href="feedback.html">Contact Us</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <section class="insurance-intro">
+        <h2>Why Choose Musinga Travel Insurance?</h2>
+        <p>Traveling is an exciting adventure, but unexpected events can disrupt your plans. With Musinga Airlines Travel Insurance, you can travel confidently knowing you’re covered for a variety of unforeseen events. From medical emergencies to delayed flights, we offer comprehensive solutions tailored to your travel needs.</p>
+        <h3>Top Benefits of Choosing Our Travel Insurance</h3>
+        <ul>
+            <li>24/7 Global Assistance</li>
+            <li>Coverage for Trip Cancellations and Interruptions</li>
+            <li>Medical and Emergency Evacuation Coverage</li>
+            <li>Protection for Lost or Delayed Baggage</li>
+            <li>Affordable Rates and Flexible Plans</li>
+        </ul>
+    </section>
+
+    <section class="insurance-options">
+        <h2>Our Insurance Plans</h2>
+
+        <!-- Basic Plan -->
+        <div class="insurance-card">
+            <h3>Basic Plan</h3>
+            <p>Starting at $20</p>
+            <ul>
+                <li>Medical Coverage: Up to $10,000</li>
+                <li>Trip Cancellation Coverage</li>
+                <li>Lost Baggage Protection</li>
+                <li>Coverage for Trip Delays</li>
+                <li>Accidental Death & Dismemberment: $5,000</li>
+            </ul>
+            <button class="choose-plan" data-plan="basic">Choose Basic Plan</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="insurance-card">
+            <h3>Premium Plan</h3>
+            <p>Starting at $50</p>
+            <ul>
+                <li>Medical Coverage: Up to $50,000</li>
+                <li>Trip Cancellation & Interruption Coverage</li>
+                <li>Lost Baggage & Personal Items Coverage</li>
+                <li>24/7 Emergency Assistance</li>
+                <li>Emergency Evacuation: $25,000</li>
+                <li>Accidental Death & Dismemberment: $10,000</li>
+            </ul>
+            <button class="choose-plan" data-plan="premium">Choose Premium Plan</button>
+        </div>
+
+        <!-- Deluxe Plan -->
+        <div class="insurance-card">
+            <h3>Deluxe Plan</h3>
+            <p>Starting at $80</p>
+            <ul>
+                <li>Medical Coverage: Up to $100,000</li>
+                <li>Comprehensive Trip Cancellation & Interruption Coverage</li>
+                <li>Lost Baggage & Personal Items Coverage</li>
+                <li>24/7 Emergency Assistance & Evacuation</li>
+                <li>Accidental Death & Dismemberment: $20,000</li>
+                <li>Repatriation of Remains</li>
+                <li>Coverage for Adventure Sports</li>
+            </ul>
+            <button class="choose-plan" data-plan="deluxe">Choose Deluxe Plan</button>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup">&times;</span>
+            <h3>Purchase Insurance</h3>
+            <p id="popup-plan-name"></p>
+            <form id="insurance-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="travel-dates">Travel Dates</label>
+                <input type="date" id="start-date" required>
+                <input type="date" id="end-date" required>
+
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" placeholder="Enter your travel destination" required>
+
+                <button type="submit">Purchase Insurance</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Musinga Airlines. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Get references to the elements
+        const popup = document.getElementById('popup');
+        const closePopupBtn = document.getElementById('close-popup');
+        const choosePlanBtns = document.querySelectorAll('.choose-plan');
+        const popupPlanName = document.getElementById('popup-plan-name');
+
+        // Function to show the popup and set the plan name
+        function showPopup(plan) {
+            popupPlanName.textContent = `You selected the ${plan} plan. Please fill out the form to proceed.`;
+            popup.classList.add('active');
+        }
+
+        // Event listeners for the "Choose Plan" buttons
+        choosePlanBtns.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const plan = e.target.getAttribute('data-plan');
+                showPopup(plan);
+            });
+        });
+
+        // Close the popup when the close button is clicked
+        closePopupBtn.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+
+        // Close the popup if the user clicks outside of it
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

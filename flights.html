@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Available Flights - MUSINGA AIRWAYS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* Flights section */
+        .flights {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .flights h3 {
+            color: rgb(107, 107, 248);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(107, 107, 248);
+            color: white;
+        }
+
+        /* Search flights */
+        .search-flights {
+            padding: 20px;
+        }
+
+        .search-flights h2 {
+            color: rgb(107, 107, 248);
+        }
+
+        .search-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .search-input {
+            flex: 1 1 200px;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-input label {
+            margin-bottom: 5px;
+            color: rgb(107, 107, 248);
+            font-weight: 600;
+        }
+
+        .search-input input,
+        .search-input button {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+        }
+
+        .search-input button {
+            background-color: rgb(107, 107, 248);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-input button:hover {
+            background-color: rgb(107, 107, 248)c;
+        }
+
+        /* Responsive for smaller devices */
+        @media (max-width: 600px) {
+            nav ul {
+                width: 100%;
+                right: 0;
+                top: 50px;
+            }
+
+            /* Table responsive */
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            td {
+                border: none;
+                padding-left: 50%;
+                position: relative;
+                text-align: right;
+                font-size: 14px;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                font-weight: bold;
+                color: rgb(107, 107, 248);
+                width: 45%;
+                white-space: nowrap;
+                text-align: left;
+            }
+
+            /* Stack search inputs vertically */
+            .search-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h2>MUSINGA AIRWAYS</h2>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="managebooking.html">Manage Booking</a></li>
+            <li><a href="feedback.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+
+    <div class="flights">
+        <h3>Available Flights</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight No.</th>
+                    <th>Departure</th>
+                    <th>Destination</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Flight No.">MA123</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">Dubai</td>
+                    <td data-label="Departure Time">10:00 AM</td>
+                    <td data-label="Arrival Time">4:00 PM</td>
+                    <td data-label="Price">$500</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA456</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">London</td>
+                    <td data-label="Departure Time">12:00 PM</td>
+                    <td data-label="Arrival Time">6:00 PM</td>
+                    <td data-label="Price">$700</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA789</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">New York</td>
+                    <td data-label="Departure Time">2:00 PM</td>
+                    <td data-label="Arrival Time">8:00 PM</td>
+                    <td data-label="Price">$1200</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA987</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">Paris</td>
+                    <td data-label="Departure Time">4:00 PM</td>
+                    <td data-label="Arrival Time">10:00 PM</td>
+                    <td data-label="Price">$850</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA990</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">Europe</td>
+                    <td data-label="Departure Time">6:00 PM</td>
+                    <td data-label="Arrival Time">12:00 PM</td>
+                    <td data-label="Price">$960</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA991</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">Switzerland</td>
+                    <td data-label="Departure Time">6:00 PM</td>
+                    <td data-label="Arrival Time">12:00 PM</td>
+                    <td data-label="Price">$990</td>
+                </tr>
+                <tr>
+                    <td data-label="Flight No.">MA992</td>
+                    <td data-label="Departure">India</td>
+                    <td data-label="Destination">Italy</td>
+                    <td data-label="Departure Time">6:00 PM</td>
+                    <td data-label="Arrival Time">12:00 PM</td>
+                    <td data-label="Price">$1020</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section class="search-flights">
+        <h2>Search for Flights</h2>
+        <div class="search-container">
+            <div class="search-input">
+                <label for="from">From:</label>
+                <input type="text" id="from" placeholder="Enter departure city" />
+            </div>
+            <div class="search-input">
+                <label for="to">To:</label>
+                <input type="text" id="to" placeholder="Enter destination city" />
+            </div>
+            <div class="search-input">
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" />
+            </div>
+            <div class="search-input">
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" />
+            </div>
+            <div class="search-input">
+                <label>&nbsp;</label>
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MUSINGA AIRWAYS</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Optional: keyboard accessibility (toggle menu on Enter or Space key)
+        menuToggle.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navLinks.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
