@@ -4,41 +4,40 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
 }
-
 /* Header Section */
 header {
-    display: flex;
     justify-content: space-between;
+    text-align: center;
     align-items: center;
     background-color:  rgb(107, 107, 248);
     padding: 20px 50px;
     color: white;
 }
-
 .logo h2 {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 1px;
+    margin-bottom: 10px;
 }
-
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: lighter;
     transition: color 0.3s ease;
 }
-
 nav ul li a:hover {
     color: #f0f8ff;
 }
@@ -168,6 +167,25 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 1.2rem;
 }
+@media (max-width: 600px) {
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .feature-grid,
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+    header {
+        padding: 15px;
+    }
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
 
 /* Home and Explore Pages */
 .explore-content {
@@ -196,6 +214,26 @@ nav ul li a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-items: center;
+}
+@media (max-width: 600px) {
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .feature-grid,
+    .destination-grid,
+    .explore-content .destination-grid {
+        grid-template-columns: 1fr;
+    }
+    header {
+        padding: 15px;
+    }
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
 }
 /* Manage booking */
 .plan-trip {
