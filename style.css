@@ -384,7 +384,7 @@ nav ul li a:hover {
 
 .hotel-info h3 {
     font-size: 1.5em;
-    color: #2b7a78;
+    color: rgb(107, 107, 248);
 }
 
 .hotel-info p {
@@ -393,7 +393,7 @@ nav ul li a:hover {
 }
 
 .hotel-info button {
-    background-color: #2b7a78;
+    background-color: rgb(107, 107, 248);
     color: #fff;
     padding: 0.5em 1em;
     border: none;
@@ -403,7 +403,7 @@ nav ul li a:hover {
 }
 
 .hotel-info button:hover {
-    background-color: #3b9a9a;
+    background-color: rgb(107, 107, 248);
 }
 /* Search form section */
 .search {
@@ -437,14 +437,14 @@ nav ul li a:hover {
 }
 
 #search-form button {
-    background-color: #2b7a78;
+    background-color: rgb(107, 107, 248);
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 #search-form button:hover {
-    background-color: #3b9a9a;
+    background-color: rgb(107, 107, 248);
 }
 
 /* Car results section */
@@ -481,7 +481,7 @@ nav ul li a:hover {
 
 .car-info h3 {
     font-size: 1.5em;
-    color: #2b7a78;
+    color: rgb(107, 107, 248);
 }
 
 .car-info p {
@@ -490,7 +490,7 @@ nav ul li a:hover {
 }
 
 .car-info button {
-    background-color: #2b7a78;
+    background-color: rgb(107, 107, 248);
     color: #fff;
     padding: 0.5em 1em;
     border: none;
@@ -500,7 +500,7 @@ nav ul li a:hover {
 }
 
 .car-info button:hover {
-    background-color: #653d03;
+    background-color: #f5cf52;
 }
 
 /* Intro Section */
