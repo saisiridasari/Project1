@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +43,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url("airplane-flying-cloudy-sky.jpg");
+    background-image: url("aeroplane.jpg");
     background-size:cover;
     background-position: center;
     height: 400px;
@@ -291,7 +290,7 @@ nav ul li a:hover {
     background-color: #005bb5;
 }
 .managebooking {
-    max-width: 600px; /* Adjust the width for a centered form */
+    max-width: 600px; 
     margin: 50px auto;
     background-color:#f0f8ff;
     padding: 30px;
@@ -306,8 +305,8 @@ nav ul li a:hover {
 }
 .managebooking form {
     display: flex;
-    flex-direction: column; /* Ensure the form elements are in a vertical column */
-    gap: 20px; /* Adds space between each form field */
+    flex-direction: column; 
+    gap: 20px;
 }
 .managebooking label {
     font-size: 1.15rem;
@@ -316,13 +315,13 @@ nav ul li a:hover {
 }
 .managebooking input,
 .managebooking select {
-    padding: 12px; /* Increase padding for a more spacious feel */
+    padding: 12px; 
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     transition: border-color 0.3s;
-    width: 100%; /* Make inputs and selects stretch the full width */
-    box-sizing: border-box; /* Prevents padding from affecting the width */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 .managebooking input:focus,
 .managebooking select:focus {
@@ -338,7 +337,7 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Make the button full width */
+    width: 100%; 
 }
 .managebooking button:hover {
     background-color:#0073e6;
@@ -521,7 +520,7 @@ nav ul li a:hover {
 .purchase-insurance h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #0072bb;
+    color: rgb(107, 107, 248);
 }
 
 .insurance-intro p,
@@ -536,7 +535,7 @@ nav ul li a:hover {
 .insurance-intro h3 {
     font-size: 22px;
     margin-top: 20px;
-    color: #0072bb;
+    color: rgb(107, 107, 248);
 }
 
 .insurance-intro ul {
@@ -549,7 +548,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     margin: 40px 20px;
-    color: #0072bb;
+    color: rgb(107, 107, 248)b;
 }
 
 .insurance-card {
@@ -566,7 +565,7 @@ nav ul li a:hover {
 }
 
 .insurance-card h3 {
-    color: #0072bb;
+    color: rgb(107, 107, 248);
     font-size: 22px;
     margin-bottom: 10px;
 }
@@ -574,13 +573,13 @@ nav ul li a:hover {
 .insurance-card p {
     font-size: 18px;
     font-weight: 600;
-    color: #0072bb;
+    color: rgb(107, 107, 248)b;
     margin-bottom: 20px;
 }
 
 .insurance-card button,
 #insurance-form button {
-    background-color: #0072bb;
+    background-color: rgb(107, 107, 248);
     color: white;
     border: none;
     padding: 15px;
@@ -603,12 +602,12 @@ nav ul li a:hover {
 }
 
 .testimonial p {
-    color: #0072bb;
+    color:rgb(107, 107, 248);
     margin-bottom: 10px;
 }
 
 .testimonial strong {
-    color: #0072bb;
+    color: rgb(107, 107, 248);
 }
 
 /* Purchase Insurance Form Section */
@@ -620,7 +619,7 @@ nav ul li a:hover {
 
 #insurance-form label {
     font-size: 16px;
-    color: #0072bb;
+    color: rgb(107, 107, 248);
 }
 
 #insurance-form input,
@@ -636,7 +635,7 @@ nav ul li a:hover {
 
 #insurance-form input:focus,
 #insurance-form select:focus {
-    border-color: #0072bb;
+    border-color: rgb(107, 107, 248);
 }
 
 /* Popup container */
